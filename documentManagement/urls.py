@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import  DocumentApiRetrieve
+from .views import DocumentApiRetrieve
 
 urlpatterns = [
-    path('documents/', DocumentApiRetrieve.as_view()),
+    path('documents/<pk>', DocumentApiRetrieve.as_view()),
 ]
