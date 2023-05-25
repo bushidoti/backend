@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'authentification',
     'documentManagement',
     'propertyManagement',
+    'warhouse',
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',

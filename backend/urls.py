@@ -4,11 +4,14 @@ from rest_framework import routers
 from rest_framework_simplejwt import views as jwt_views
 from documentManagement.views import DocumentApi
 from propertyManagement.views import PersonApi, PropertyApi
+from warhouse.views import ProductApi, AllProductstApi
 
 router = routers.DefaultRouter()
 router.register(r'documents', DocumentApi, 'documents')
 router.register(r'persons', PersonApi, 'persons')
 router.register(r'properties', PropertyApi, 'properties')
+router.register(r'product', ProductApi, 'product')
+router.register(r'allproducts', AllProductstApi, 'allproducts')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
