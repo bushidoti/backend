@@ -11,6 +11,8 @@ class Product(models.Model):
     inventory = models.CharField(max_length=50, blank=True, null=True)
     operator = models.CharField(max_length=50, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
+    input = models.BigIntegerField(blank=True, null=True)
+    output = models.BigIntegerField(blank=True, null=True)
     left_stock = models.BigIntegerField(default=False, blank=True, null=True)
     document_type = models.CharField(max_length=50, blank=True, null=True)
     document_code = models.CharField(max_length=50, blank=True, null=True, unique=True)
