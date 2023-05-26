@@ -8,7 +8,7 @@ class ProductApi(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
-    filterset_fields = ['code', 'name', 'category', 'date', 'consumable',
+    filterset_fields = ['code', 'name', 'category', 'date',
                         'inventory', 'recycle_status', 'operator']
 
 
