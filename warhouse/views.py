@@ -1,7 +1,7 @@
 import django_filters
 from rest_framework import viewsets
-from .serializer import ProductSerializer, AllProductsSerializer
-from .models import Product, AllProducts
+from .serializer import ProductSerializer, AllProductsSerializer, AutoIncrementSerializer
+from .models import Product, AllProducts, AutoIncrement
 
 
 class ProductApi(viewsets.ModelViewSet):
@@ -18,3 +18,7 @@ class AllProductstApi(viewsets.ModelViewSet):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['id', 'date', 'consumable']
 
+
+class AutoIncrementApi(viewsets.ModelViewSet):
+    serializer_class = AutoIncrementSerializer
+    queryset = AutoIncrement.objects.all()
