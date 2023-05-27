@@ -32,3 +32,13 @@ class AllProducts(models.Model):
     document_type = models.CharField(max_length=50, blank=True, null=True)
     document_code = models.CharField(max_length=50, blank=True, null=True, unique=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+
+class AutoIncrement(models.Model):
+    oghab101 = models.BigIntegerField(blank=True, null=True)
+    oghab102 = models.BigIntegerField(blank=True, null=True)
+    oghab103 = models.BigIntegerField(blank=True, null=True)
+    oghab104 = models.BigIntegerField(blank=True, null=True)
+    oghab105 = models.BigIntegerField(blank=True, null=True)
+    oghab106 = models.BigIntegerField(blank=True, null=True)
+    oghab107 = models.BigIntegerField(blank=True, null=True)

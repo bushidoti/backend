@@ -17,3 +17,4 @@ class AllProductstApi(viewsets.ModelViewSet):
     queryset = AllProducts.objects.all()
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['id', 'date', 'consumable']
+
