@@ -13,7 +13,7 @@ class Product(models.Model):
     output = models.BigIntegerField(blank=True, null=True)
     left_stock = models.BigIntegerField(default=False, blank=True, null=True)
     document_type = models.CharField(max_length=50, blank=True, null=True)
-    document_code = models.CharField(max_length=50, blank=True, null=True, unique=True)
+    document_code = models.CharField(max_length=50, blank=True, null=True)
     recycle_status = models.CharField(max_length=50, blank=True, null=True)
     recycle_date = models.DateField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
@@ -21,6 +21,7 @@ class Product(models.Model):
 
 class AllProducts(models.Model):
     consumable = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
     input = models.BigIntegerField(blank=True, null=True)
     output = models.BigIntegerField(blank=True, null=True)
     operator = models.CharField(max_length=50, blank=True, null=True)
@@ -30,8 +31,10 @@ class AllProducts(models.Model):
     buyer = models.CharField(max_length=50, blank=True, null=True)
     receiver = models.CharField(max_length=50, blank=True, null=True)
     document_type = models.CharField(max_length=50, blank=True, null=True)
-    document_code = models.CharField(max_length=50, blank=True, null=True, unique=True)
+    document_code = models.CharField(max_length=50, blank=True, null=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    factor = models.TextField(blank=True, null=True)
+    checkBill = models.TextField(blank=True, null=True)
 
 
 class AutoIncrement(models.Model):
