@@ -16,7 +16,7 @@ class AllProductstApi(viewsets.ModelViewSet):
     serializer_class = AllProductsSerializer
     queryset = AllProducts.objects.all()
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
-    filterset_fields = ['id', 'date', 'consumable']
+    filterset_fields = ['id', 'date', 'consumable', 'document_code', 'document_type']
 
 
 class AutoIncrementApi(viewsets.ModelViewSet):
