@@ -24,6 +24,7 @@ class AllProducts(models.Model):
     name = models.CharField(max_length=50, blank=True, null=True)
     input = models.BigIntegerField(blank=True, null=True)
     output = models.BigIntegerField(blank=True, null=True)
+    afterOperator = models.BigIntegerField(blank=True, null=True)
     operator = models.CharField(max_length=50, blank=True, null=True)
     scale = models.CharField(max_length=50, blank=True, null=True)
     inventory_dst = models.CharField(max_length=50, blank=True, null=True)
@@ -35,6 +36,8 @@ class AllProducts(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     factor = models.TextField(blank=True, null=True)
     checkBill = models.TextField(blank=True, null=True)
+    amendment = models.TextField(blank=True, null=True)
+    obsolete = models.BooleanField(blank=True, null=True)
 
 
 class AutoIncrement(models.Model):
