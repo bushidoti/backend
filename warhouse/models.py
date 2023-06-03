@@ -40,6 +40,21 @@ class AllProducts(models.Model):
     obsolete = models.BooleanField(blank=True, null=True)
 
 
+class PendingProducts(models.Model):
+    name = models.CharField(max_length=50, blank=True, null=True)
+    input = models.BigIntegerField(blank=True, null=True)
+    scale = models.CharField(max_length=50, blank=True, null=True)
+    inventory_src = models.CharField(max_length=50, blank=True, null=True)
+    inventory_dst = models.CharField(max_length=50, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    receiver = models.CharField(max_length=50, blank=True, null=True)
+    document_type = models.CharField(max_length=50, blank=True, null=True)
+    document_code = models.CharField(max_length=50, blank=True, null=True)
+    factor = models.TextField(blank=True, null=True)
+    checkBill = models.TextField(blank=True, null=True)
+    amendment = models.TextField(blank=True, null=True)
+
+
 class AutoIncrement(models.Model):
     oghab101 = models.BigIntegerField(blank=True, null=True)
     oghab102 = models.BigIntegerField(blank=True, null=True)
