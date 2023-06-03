@@ -27,7 +27,6 @@ class AllProducts(models.Model):
     afterOperator = models.BigIntegerField(blank=True, null=True)
     operator = models.CharField(max_length=50, blank=True, null=True)
     scale = models.CharField(max_length=50, blank=True, null=True)
-    inventory_dst = models.CharField(max_length=50, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     buyer = models.CharField(max_length=50, blank=True, null=True)
     receiver = models.CharField(max_length=50, blank=True, null=True)
@@ -38,23 +37,6 @@ class AllProducts(models.Model):
     checkBill = models.TextField(blank=True, null=True)
     amendment = models.TextField(blank=True, null=True)
     obsolete = models.BooleanField(blank=True, null=True)
-
-
-class PendingProducts(models.Model):
-    name = models.CharField(max_length=50, blank=True, null=True)
-    input = models.BigIntegerField(blank=True, null=True)
-    scale = models.CharField(max_length=50, blank=True, null=True)
-    inventory_src = models.CharField(max_length=50, blank=True, null=True)
-    inventory_dst = models.CharField(max_length=50, blank=True, null=True)
-    date = models.DateField(blank=True, null=True)
-    receiver = models.CharField(max_length=50, blank=True, null=True)
-    document_type = models.CharField(max_length=50, blank=True, null=True)
-    document_code = models.CharField(max_length=50, blank=True, null=True)
-    factor = models.TextField(blank=True, null=True)
-    checkBill = models.TextField(blank=True, null=True)
-    amendment = models.TextField(blank=True, null=True)
-    agree = models.BooleanField(blank=True, null=True)
-    disagree = models.BooleanField(blank=True, null=True)
 
 
 class AutoIncrement(models.Model):
