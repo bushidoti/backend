@@ -53,6 +53,8 @@ class PendingProducts(models.Model):
     factor = models.TextField(blank=True, null=True)
     checkBill = models.TextField(blank=True, null=True)
     amendment = models.TextField(blank=True, null=True)
+    agree = models.BooleanField(blank=True, null=True)
+    disagree = models.BooleanField(blank=True, null=True)
 
 
 class AutoIncrement(models.Model):
