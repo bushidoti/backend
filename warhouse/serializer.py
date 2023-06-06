@@ -18,3 +18,4 @@ class AutoIncrementSerializer(serializers.ModelSerializer):
     class Meta:
         model = AutoIncrement
         fields = '__all__'
+
