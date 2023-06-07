@@ -112,6 +112,14 @@ class AirportEquipment(models.Model):
     description = models.TextField(max_length=50, blank=True, null=True)
 
 
+class RepairedAirportEquipment(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    repaired_type = models.CharField(max_length=50, blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    airport_equipment = models.ForeignKey(AirportEquipment, on_delete=models.CASCADE)
+
+
 class SafetyEquipment(models.Model):
     code = models.BigIntegerField(primary_key=True, unique=True)
     name = models.CharField(max_length=100, blank=True, null=True)
@@ -126,6 +134,14 @@ class SafetyEquipment(models.Model):
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+
+
+class RepairedSafetyEquipment(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    repaired_type = models.CharField(max_length=50, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    safety_equipment = models.ForeignKey(SafetyEquipment, on_delete=models.CASCADE)
 
 
 class AirportVehicle(models.Model):
@@ -146,7 +162,17 @@ class AirportVehicle(models.Model):
     motor = models.CharField(max_length=50, blank=True, null=True)
     chassis = models.CharField(max_length=50, blank=True, null=True)
     kilometer = models.BigIntegerField(blank=True, null=True)
-    year_changed = models.IntegerField(max_length=4, blank=True, null=True)
+    year_changed = models.IntegerField(blank=True, null=True)
+
+
+class RepairedAirportVehicle(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    repaired_type = models.CharField(max_length=50, blank=True, null=True)
+    kilometer = models.BigIntegerField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    year_changed = models.IntegerField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    airport_vehicle = models.ForeignKey(AirportVehicle, on_delete=models.CASCADE)
 
 
 class OfficeVehicle(models.Model):
@@ -167,7 +193,17 @@ class OfficeVehicle(models.Model):
     motor = models.CharField(max_length=50, blank=True, null=True)
     chassis = models.CharField(max_length=50, blank=True, null=True)
     kilometer = models.BigIntegerField(blank=True, null=True)
-    year_changed = models.IntegerField(max_length=4, blank=True, null=True)
+    year_changed = models.IntegerField(blank=True, null=True)
+
+
+class RepairedOfficeVehicle(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    repaired_type = models.CharField(max_length=50, blank=True, null=True)
+    kilometer = models.BigIntegerField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    year_changed = models.IntegerField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    office_vehicle = models.ForeignKey(OfficeVehicle, on_delete=models.CASCADE)
 
 
 class AirportFurniture(models.Model):
@@ -183,6 +219,13 @@ class AirportFurniture(models.Model):
     description = models.TextField(max_length=50, blank=True, null=True)
 
 
+class RepairedAirportFurniture(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    airport_furniture = models.ForeignKey(AirportFurniture, on_delete=models.CASCADE)
+
+
 class OfficeFurniture(models.Model):
     code = models.BigIntegerField(primary_key=True, unique=True)
     name = models.CharField(max_length=100, blank=True, null=True)
@@ -194,6 +237,13 @@ class OfficeFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+
+
+class RepairedOfficeFurniture(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    office_furniture = models.ForeignKey(OfficeFurniture, on_delete=models.CASCADE)
 
 
 class ElectronicFurniture(models.Model):
@@ -210,6 +260,13 @@ class ElectronicFurniture(models.Model):
     description = models.TextField(max_length=50, blank=True, null=True)
 
 
+class RepairedElectronicFurniture(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    electronic_furniture = models.ForeignKey(ElectronicFurniture, on_delete=models.CASCADE)
+
+
 class FacilityFurniture(models.Model):
     code = models.BigIntegerField(primary_key=True, unique=True)
     name = models.CharField(max_length=100, blank=True, null=True)
@@ -222,6 +279,13 @@ class FacilityFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+
+
+class RepairedFacilityFurniture(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    facility_furniture = models.ForeignKey(FacilityFurniture, on_delete=models.CASCADE)
 
 
 class DigitalFurniture(models.Model):
@@ -245,6 +309,14 @@ class DigitalFurniture(models.Model):
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+
+
+class RepairedDigitalFurniture(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    repaired_type = models.CharField(max_length=50, blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    digital_furniture = models.ForeignKey(DigitalFurniture, on_delete=models.CASCADE)
 
 
 class NoneIndustrialTool(models.Model):
@@ -273,6 +345,13 @@ class IndustrialTool(models.Model):
     description = models.TextField(max_length=50, blank=True, null=True)
 
 
+class RepairedIndustrialTool(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    description = models.TextField(max_length=50, blank=True, null=True)
+    industrial_tool = models.ForeignKey(IndustrialTool, on_delete=models.CASCADE)
+
+
 class Benefit(models.Model):
     code = models.BigIntegerField(primary_key=True, unique=True)
     number_type = models.CharField(max_length=100, blank=True, null=True)
@@ -294,5 +373,5 @@ class SupportItem(models.Model):
     user = models.CharField(max_length=50, blank=True, null=True)
     using_location = models.CharField(max_length=50, blank=True, null=True)
     type_register = models.CharField(max_length=50, blank=True, null=True)
-    repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+

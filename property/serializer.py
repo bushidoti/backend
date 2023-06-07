@@ -84,3 +84,63 @@ class AirportFurnitureSerializer(serializers.ModelSerializer):
     class Meta:
         model = AirportFurniture
         fields = '__all__'
+
+
+class RepairedDigitalFurnitureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedDigitalFurniture
+        fields = '__all__'
+
+
+class RepairedFacilityFurnitureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedFacilityFurniture
+        fields = '__all__'
+
+
+class RepairedOfficeFurnitureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedOfficeFurniture
+        fields = '__all__'
+
+
+class RepairedAirportFurnitureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedAirportFurniture
+        fields = '__all__'
+
+
+class RepairedElectronicFurnitureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedElectronicFurniture
+        fields = '__all__'
+
+
+class RepairedSafetyEquipmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedSafetyEquipment
+        fields = '__all__'
+
+
+class RepairedAirportEquipmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedAirportEquipment
+        fields = '__all__'
+
+
+class RepairedAirportVehicleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedAirportVehicle
+        fields = '__all__'
+
+
+class RepairedOfficeVehicleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedOfficeVehicle
+        fields = '__all__'
+
+
+class RepairedIndustrialToolSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RepairedIndustrialTool
+        fields = '__all__'

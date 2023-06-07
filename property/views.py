@@ -72,3 +72,53 @@ class BenefitApi(viewsets.ModelViewSet):
 class SupportItemApi(viewsets.ModelViewSet):
     serializer_class = SupportItemSerializer
     queryset = SupportItem.objects.all()
+
+
+class RepairedDigitalFurnitureApi(viewsets.ModelViewSet):
+    serializer_class = RepairedDigitalFurnitureSerializer
+    queryset = RepairedDigitalFurniture.objects.all()
+
+
+class RepairedFacilityFurnitureApi(viewsets.ModelViewSet):
+    serializer_class = RepairedFacilityFurnitureSerializer
+    queryset = RepairedFacilityFurniture.objects.all()
+
+
+class RepairedOfficeFurnitureApi(viewsets.ModelViewSet):
+    serializer_class = RepairedOfficeFurnitureSerializer
+    queryset = RepairedOfficeFurniture.objects.all()
+
+
+class RepairedAirportFurnitureApi(viewsets.ModelViewSet):
+    serializer_class = RepairedAirportFurnitureSerializer
+    queryset = RepairedAirportFurniture.objects.all()
+
+
+class RepairedElectronicFurnitureApi(viewsets.ModelViewSet):
+    serializer_class = RepairedElectronicFurnitureSerializer
+    queryset = RepairedElectronicFurniture.objects.all()
+
+
+class RepairedSafetyEquipmentApi(viewsets.ModelViewSet):
+    serializer_class = RepairedSafetyEquipmentSerializer
+    queryset = RepairedSafetyEquipment.objects.all()
+
+
+class RepairedAirportEquipmentApi(viewsets.ModelViewSet):
+    serializer_class = RepairedAirportEquipmentSerializer
+    queryset = RepairedAirportEquipment.objects.all()
+
+
+class RepairedAirportVehicleApi(viewsets.ModelViewSet):
+    serializer_class = RepairedAirportVehicleSerializer
+    queryset = RepairedAirportVehicle.objects.all()
+
+
+class RepairedOfficeVehicleApi(viewsets.ModelViewSet):
+    serializer_class = RepairedOfficeVehicleSerializer
+    queryset = RepairedOfficeVehicle.objects.all()
+
+
+class RepairedIndustrialToolApi(viewsets.ModelViewSet):
+    serializer_class = RepairedIndustrialToolSerializer
+    queryset = RepairedIndustrialTool.objects.all()

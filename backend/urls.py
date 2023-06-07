@@ -28,6 +28,16 @@ router.register(r'electronicfurniture', ElectronicFurnitureApi, 'electronicfurni
 router.register(r'supportitem', SupportItemApi, 'supportitem')
 router.register(r'industrialtool', IndustrialToolApi, 'industrialtool')
 router.register(r'noneindustrialtool', NoneIndustrialToolApi, 'noneindustrialtool')
+router.register(r'repairedfigitalfurniture', RepairedDigitalFurnitureApi, 'repairedfigitalfurniture')
+router.register(r'repairedfacilityfurniture', RepairedFacilityFurnitureApi, 'repairedfacilityfurniture')
+router.register(r'repairedofficefurniture', RepairedOfficeFurnitureApi, 'repairedofficefurniture')
+router.register(r'repairedairportfurniture', RepairedAirportFurnitureApi, 'repairedairportfurniture')
+router.register(r'repairedelectronicfurniture', RepairedElectronicFurnitureApi, 'repairedelectronicfurniture')
+router.register(r'repairedsafetyequipment', RepairedSafetyEquipmentApi, 'repairedsafetyequipment')
+router.register(r'repairedairportequipment', RepairedAirportEquipmentApi, 'repairedairportequipment')
+router.register(r'repairedairportvehicle', RepairedAirportVehicleApi, 'repairedairportvehicle')
+router.register(r'repairedofficevehicle', RepairedOfficeVehicleApi, 'repairedofficevehicle')
+router.register(r'repairedindustrialtool', RepairedIndustrialToolApi, 'repairedindustrialtool')
 
 
 urlpatterns = [
