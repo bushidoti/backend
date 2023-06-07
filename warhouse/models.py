@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator
 
 
 class Product(models.Model):
@@ -40,10 +41,10 @@ class AllProducts(models.Model):
 
 
 class AutoIncrement(models.Model):
-    oghab101 = models.BigIntegerField(blank=True, null=True)
-    oghab102 = models.BigIntegerField(blank=True, null=True)
-    oghab103 = models.BigIntegerField(blank=True, null=True)
-    oghab104 = models.BigIntegerField(blank=True, null=True)
-    oghab105 = models.BigIntegerField(blank=True, null=True)
-    oghab106 = models.BigIntegerField(blank=True, null=True)
-    oghab107 = models.BigIntegerField(blank=True, null=True)
+    oghab101 = models.BigIntegerField(validators=[MaxValueValidator(1019999)], blank=True, null=True)
+    oghab102 = models.BigIntegerField(validators=[MaxValueValidator(1029999)], blank=True, null=True)
+    oghab103 = models.BigIntegerField(validators=[MaxValueValidator(1039999)], blank=True, null=True)
+    oghab104 = models.BigIntegerField(validators=[MaxValueValidator(1049999)], blank=True, null=True)
+    oghab105 = models.BigIntegerField(validators=[MaxValueValidator(1059999)], blank=True, null=True)
+    oghab106 = models.BigIntegerField(validators=[MaxValueValidator(1069999)], blank=True, null=True)
+    oghab107 = models.BigIntegerField(validators=[MaxValueValidator(1079999)], blank=True, null=True)
