@@ -129,7 +129,7 @@ class SafetyEquipment(models.Model):
     user = models.CharField(max_length=50, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     install_location = models.CharField(max_length=50, blank=True, null=True)
-    owner = models.CharField(max_length=50, blank=True, null=True)
+    use_for = models.CharField(max_length=50, blank=True, null=True)
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
