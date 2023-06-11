@@ -28,7 +28,7 @@ router.register(r'electronicfurniture', ElectronicFurnitureApi, 'electronicfurni
 router.register(r'supportitem', SupportItemApi, 'supportitem')
 router.register(r'industrialtool', IndustrialToolApi, 'industrialtool')
 router.register(r'noneindustrialtool', NoneIndustrialToolApi, 'noneindustrialtool')
-router.register(r'repairedfigitalfurniture', RepairedDigitalFurnitureApi, 'repairedfigitalfurniture')
+router.register(r'repairedigitalfurniture', RepairedDigitalFurnitureApi, 'repairedigitalfurniture')
 router.register(r'repairedfacilityfurniture', RepairedFacilityFurnitureApi, 'repairedfacilityfurniture')
 router.register(r'repairedofficefurniture', RepairedOfficeFurnitureApi, 'repairedofficefurniture')
 router.register(r'repairedairportfurniture', RepairedAirportFurnitureApi, 'repairedairportfurniture')

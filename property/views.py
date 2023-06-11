@@ -12,66 +12,94 @@ class AutoIncrementPropertyApi(viewsets.ModelViewSet):
 class AirportEquipmentApi(viewsets.ModelViewSet):
     serializer_class = AirportEquipmentSerializer
     queryset = AirportEquipment.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'user', 'install_location', 'model', 'year_made', 'owner']
 
 
 class SafetyEquipmentApi(viewsets.ModelViewSet):
     serializer_class = SafetyEquipmentSerializer
     queryset = SafetyEquipment.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'user', 'install_location', 'use_for']
 
 
 class AirportVehicleApi(viewsets.ModelViewSet):
     serializer_class = AirportVehicleSerializer
     queryset = AirportVehicle.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'user', 'year_made', 'model', 'chassis', 'motor', 'plate1', 'plate2', 'plate3',
+                        'plate4', 'owner']
 
 
 class OfficeVehicleApi(viewsets.ModelViewSet):
     serializer_class = OfficeVehicleSerializer
     queryset = OfficeVehicle.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'user', 'year_made', 'model', 'chassis', 'motor', 'plate1', 'plate2', 'plate3',
+                        'plate4', 'owner']
 
 
 class AirportFurnitureApi(viewsets.ModelViewSet):
     serializer_class = AirportFurnitureSerializer
     queryset = AirportFurniture.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'year_buy', 'install_location']
 
 
 class FacilityFurnitureApi(viewsets.ModelViewSet):
     serializer_class = FacilityFurnitureSerializer
     queryset = FacilityFurniture.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'year_buy', 'install_location', 'model', 'user']
 
 
 class DigitalFurnitureApi(viewsets.ModelViewSet):
     serializer_class = DigitalFurnitureSerializer
     queryset = DigitalFurniture.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'year_buy', 'install_location', 'model', 'user']
 
 
 class OfficeFurnitureApi(viewsets.ModelViewSet):
     serializer_class = OfficeFurnitureSerializer
     queryset = OfficeFurniture.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'using_location', 'user', 'year_made']
 
 
 class ElectronicFurnitureApi(viewsets.ModelViewSet):
     serializer_class = ElectronicFurnitureSerializer
     queryset = ElectronicFurniture.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'install_location', 'model', 'year_buy', 'user']
 
 
 class NoneIndustrialToolApi(viewsets.ModelViewSet):
     serializer_class = NoneIndustrialToolSerializer
     queryset = NoneIndustrialTool.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'year_buy', 'user', 'using_location']
 
 
 class IndustrialToolApi(viewsets.ModelViewSet):
     serializer_class = IndustrialToolSerializer
     queryset = IndustrialTool.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'year_buy', 'user', 'using_location', 'model']
 
 
 class BenefitApi(viewsets.ModelViewSet):
     serializer_class = BenefitSerializer
     queryset = Benefit.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'number_type', 'number', 'using_location']
 
 
 class SupportItemApi(viewsets.ModelViewSet):
     serializer_class = SupportItemSerializer
     queryset = SupportItem.objects.all()
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['code', 'name', 'user', 'using_location', 'model', 'type_item']
 
 
 class RepairedDigitalFurnitureApi(viewsets.ModelViewSet):
