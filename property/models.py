@@ -110,6 +110,8 @@ class AirportEquipment(models.Model):
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
+
 
 
 class RepairedAirportEquipment(models.Model):
@@ -118,6 +120,7 @@ class RepairedAirportEquipment(models.Model):
     description = models.TextField(max_length=50, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     airport_equipment = models.ForeignKey(AirportEquipment, on_delete=models.CASCADE)
+
 
 
 class SafetyEquipment(models.Model):
@@ -134,6 +137,7 @@ class SafetyEquipment(models.Model):
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedSafetyEquipment(models.Model):
@@ -166,6 +170,7 @@ class AirportVehicle(models.Model):
     chassis = models.CharField(max_length=50, blank=True, null=True)
     kilometer = models.BigIntegerField(blank=True, null=True)
     year_changed = models.IntegerField(blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedAirportVehicle(models.Model):
@@ -200,6 +205,7 @@ class OfficeVehicle(models.Model):
     chassis = models.CharField(max_length=50, blank=True, null=True)
     kilometer = models.BigIntegerField(blank=True, null=True)
     year_changed = models.IntegerField(blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedOfficeVehicle(models.Model):
@@ -223,6 +229,7 @@ class AirportFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedAirportFurniture(models.Model):
@@ -243,6 +250,7 @@ class OfficeFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedOfficeFurniture(models.Model):
@@ -264,6 +272,7 @@ class ElectronicFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedElectronicFurniture(models.Model):
@@ -285,6 +294,7 @@ class FacilityFurniture(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedFacilityFurniture(models.Model):
@@ -315,6 +325,7 @@ class DigitalFurniture(models.Model):
     repaired_status = models.BooleanField(blank=True, null=True)
     repaired_type = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedDigitalFurniture(models.Model):
@@ -335,6 +346,7 @@ class NoneIndustrialTool(models.Model):
     using_location = models.CharField(max_length=50, blank=True, null=True)
     type_register = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class IndustrialTool(models.Model):
@@ -349,6 +361,7 @@ class IndustrialTool(models.Model):
     type_register = models.CharField(max_length=50, blank=True, null=True)
     repaired_status = models.BooleanField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
 
 class RepairedIndustrialTool(models.Model):
@@ -380,4 +393,5 @@ class SupportItem(models.Model):
     using_location = models.CharField(max_length=50, blank=True, null=True)
     type_register = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    movement_status = models.CharField(max_length=50, blank=True, null=True)
 
