@@ -114,6 +114,9 @@ class AirportEquipment(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedAirportEquipment(models.Model):
@@ -142,6 +145,9 @@ class SafetyEquipment(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedSafetyEquipment(models.Model):
@@ -178,6 +184,9 @@ class AirportVehicle(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedAirportVehicle(models.Model):
@@ -215,6 +224,9 @@ class OfficeVehicle(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedOfficeVehicle(models.Model):
@@ -242,6 +254,9 @@ class AirportFurniture(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedAirportFurniture(models.Model):
@@ -266,6 +281,9 @@ class OfficeFurniture(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedOfficeFurniture(models.Model):
@@ -291,6 +309,9 @@ class ElectronicFurniture(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedElectronicFurniture(models.Model):
@@ -316,6 +337,9 @@ class FacilityFurniture(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedFacilityFurniture(models.Model):
@@ -350,6 +374,9 @@ class DigitalFurniture(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedDigitalFurniture(models.Model):
@@ -374,6 +401,9 @@ class NoneIndustrialTool(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class IndustrialTool(models.Model):
@@ -392,6 +422,9 @@ class IndustrialTool(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class RepairedIndustrialTool(models.Model):
@@ -410,6 +443,9 @@ class Benefit(models.Model):
     using_location = models.CharField(max_length=50, blank=True, null=True)
     type_register = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
 class SupportItem(models.Model):
@@ -427,3 +463,8 @@ class SupportItem(models.Model):
     movement_status = models.CharField(max_length=50, blank=True, null=True)
     message = models.CharField(max_length=50, blank=True, null=True)
     sign_received = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_result = models.TextField(max_length=500, blank=True, null=True)
+    last_handling_date = models.DateField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
+
+

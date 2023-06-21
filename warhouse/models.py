@@ -22,7 +22,6 @@ class Product(models.Model):
     yearly_handling = models.CharField(max_length=4, blank=True, null=True)
 
 
-
 class AllProducts(models.Model):
     consumable = models.CharField(max_length=50, blank=True, null=True)
     name = models.CharField(max_length=50, blank=True, null=True)
