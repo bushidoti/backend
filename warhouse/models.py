@@ -18,6 +18,9 @@ class Product(models.Model):
     recycle_status = models.CharField(max_length=50, blank=True, null=True)
     recycle_date = models.DateField(blank=True, null=True)
     description = models.TextField(max_length=50, blank=True, null=True)
+    count = models.BigIntegerField(blank=True, null=True)
+    yearly_handling = models.CharField(max_length=4, blank=True, null=True)
+
 
 
 class AllProducts(models.Model):
@@ -38,6 +41,12 @@ class AllProducts(models.Model):
     checkBill = models.TextField(blank=True, null=True)
     amendment = models.TextField(blank=True, null=True)
     obsolete = models.BooleanField(blank=True, null=True)
+
+
+class Handling(models.Model):
+    result = models.TextField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
 
 class AutoIncrement(models.Model):

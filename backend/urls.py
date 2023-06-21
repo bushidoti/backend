@@ -4,7 +4,7 @@ from rest_framework import routers
 from rest_framework_simplejwt import views as jwt_views
 from documentManagement.views import DocumentApi
 from propertyManagement.views import PersonApi, PropertyApi
-from warhouse.views import ProductApi, AllProductstApi, AutoIncrementApi
+from warhouse.views import ProductApi, AllProductstApi, AutoIncrementApi, HandlingApi
 from property.views import *
 
 router = routers.DefaultRouter()
@@ -38,6 +38,7 @@ router.register(r'repairedairportequipment', RepairedAirportEquipmentApi, 'repai
 router.register(r'repairedairportvehicle', RepairedAirportVehicleApi, 'repairedairportvehicle')
 router.register(r'repairedofficevehicle', RepairedOfficeVehicleApi, 'repairedofficevehicle')
 router.register(r'repairedindustrialtool', RepairedIndustrialToolApi, 'repairedindustrialtool')
+router.register(r'handling-product', HandlingApi, 'handling-product')
 
 
 urlpatterns = [

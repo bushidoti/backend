@@ -1,7 +1,7 @@
 import django_filters
 from rest_framework import viewsets
-from .serializer import ProductSerializer, AllProductsSerializer, AutoIncrementSerializer
-from .models import Product, AllProducts, AutoIncrement
+from .serializer import ProductSerializer, AllProductsSerializer, AutoIncrementSerializer, HandlingSerializer
+from .models import Product, AllProducts, AutoIncrement, Handling
 
 
 class ProductApi(viewsets.ModelViewSet):
@@ -22,3 +22,8 @@ class AllProductstApi(viewsets.ModelViewSet):
 class AutoIncrementApi(viewsets.ModelViewSet):
     serializer_class = AutoIncrementSerializer
     queryset = AutoIncrement.objects.all()
+
+
+class HandlingApi(viewsets.ModelViewSet):
+    serializer_class = HandlingSerializer
+    queryset = Handling.objects.all()
