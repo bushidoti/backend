@@ -1,10 +1,14 @@
 import django_filters
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+
 from .serializer import ProductSerializer, AllProductsSerializer, AutoIncrementSerializer, HandlingSerializer
 from .models import Product, AllProducts, AutoIncrement, Handling
 
 
 class ProductApi(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
@@ -13,6 +17,8 @@ class ProductApi(viewsets.ModelViewSet):
 
 
 class AllProductstApi(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     serializer_class = AllProductsSerializer
     queryset = AllProducts.objects.all()
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
@@ -20,10 +26,14 @@ class AllProductstApi(viewsets.ModelViewSet):
 
 
 class AutoIncrementApi(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     serializer_class = AutoIncrementSerializer
     queryset = AutoIncrement.objects.all()
 
 
 class HandlingApi(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+
     serializer_class = HandlingSerializer
     queryset = Handling.objects.all()
