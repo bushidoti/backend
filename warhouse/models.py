@@ -25,9 +25,9 @@ class Product(models.Model):
 class AllProducts(models.Model):
     consumable = models.CharField(max_length=50, blank=True, null=True)
     name = models.CharField(max_length=50, blank=True, null=True)
-    input = models.BigIntegerField(blank=True, null=True)
-    output = models.BigIntegerField(blank=True, null=True)
-    afterOperator = models.BigIntegerField(blank=True, null=True)
+    input = models.FloatField(blank=True, null=True)
+    output = models.FloatField(blank=True, null=True)
+    afterOperator = models.FloatField(blank=True, null=True)
     operator = models.CharField(max_length=50, blank=True, null=True)
     scale = models.CharField(max_length=50, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
