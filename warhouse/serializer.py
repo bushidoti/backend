@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, AllProducts, AutoIncrement ,Handling
+from .models import Product, AllProducts, AutoIncrement, Handling
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -19,8 +19,8 @@ class HandlingSerializer(serializers.ModelSerializer):
         model = Handling
         fields = '__all__'
 
+
 class AutoIncrementSerializer(serializers.ModelSerializer):
     class Meta:
         model = AutoIncrement
         fields = '__all__'
-
