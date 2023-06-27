@@ -9,8 +9,15 @@ class HomeView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        content = {'message': request.user.get_full_name()}
+        content = {'message': request.user.last_name}
+        return Response(content)
 
+
+class PermissionView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        content = {'message': request.user.first_name}
         return Response(content)
 
 
