@@ -3,13 +3,15 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
+from authentification.models import Employee
 
 
 class HomeView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        content = {'message': request.user.last_name}
+        result = Employee.objects.filter(user=request.user.id)
+        content = {'message': result[0].user.last_name}
         return Response(content)
 
 
