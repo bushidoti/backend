@@ -19,7 +19,8 @@ class PermissionView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        content = {'message': request.user.first_name}
+        result = Employee.objects.filter(user=request.user.id)
+        content = {'message': result[0].rank}
         return Response(content)
 
 
