@@ -14,6 +14,15 @@ class FullNameView(APIView):
         return Response(content)
 
 
+class OfficeView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        result = Employee.objects.filter(user=request.user.id)
+        content = {'message': result[0].office}
+        return Response(content)
+
+
 class PermissionView(APIView):
     permission_classes = (IsAuthenticated,)
 
