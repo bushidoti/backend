@@ -11,7 +11,7 @@ class HomeView(APIView):
 
     def get(self, request):
         result = Employee.objects.filter(user=request.user.id)
-        content = {'message': result[0].rank}
+        content = {'message': result[0].user.last_name}
         return Response(content)
 
 
