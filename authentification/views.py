@@ -6,12 +6,11 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from authentification.models import Employee
 
 
-class HomeView(APIView):
+class FullNameView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        result = Employee.objects.filter(user=request.user.id)
-        content = {'message': result[0].user.last_name}
+        content = {'message': request.user.get_full_name()}
         return Response(content)
 
 
