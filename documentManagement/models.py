@@ -25,6 +25,12 @@ class Document(models.Model):
     doc_2 = models.TextField(blank=True, null=True)
     doc_3 = models.TextField(blank=True, null=True)
     doc_4 = models.TextField(blank=True, null=True)
+    doc_5 = models.TextField(blank=True, null=True)
+    doc_6 = models.TextField(blank=True, null=True)
+    doc_7 = models.TextField(blank=True, null=True)
+    doc_8 = models.TextField(blank=True, null=True)
+    doc_9 = models.TextField(blank=True, null=True)
+    doc_10 = models.TextField(blank=True, null=True)
     doc_bail_1 = models.TextField(blank=True, null=True)
     doc_bail_2 = models.TextField(blank=True, null=True)
 
