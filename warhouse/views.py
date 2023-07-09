@@ -1,6 +1,8 @@
 import django_filters
 from rest_framework import viewsets
+from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from .serializer import ProductSerializer, AllProductsSerializer, AutoIncrementSerializer, HandlingSerializer
 from .models import Product, AllProducts, AutoIncrement, Handling
@@ -16,8 +18,9 @@ class ProductApi(viewsets.ModelViewSet):
                         'inventory', 'recycle_status', 'operator']
 
 
+
+
 class AllProductstApi(viewsets.ModelViewSet):
-    permission_classes = (IsAuthenticated,)
 
     serializer_class = AllProductsSerializer
     queryset = AllProducts.objects.all()
